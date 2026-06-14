@@ -1,4 +1,4 @@
-package au.edu.jcu.cp3406_cp5307_utilityappstartertemplate.ui.theme
+package au.edu.jcu.reefsafe.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

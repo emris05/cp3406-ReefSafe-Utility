@@ -1,4 +1,4 @@
-package au.edu.jcu.cp3406_cp5307_utilityappstartertemplate
+package au.edu.jcu.reefsafe
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -28,14 +28,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import au.edu.jcu.cp3406_cp5307_utilityappstartertemplate.ui.theme.CP3406_CP5603UtilityAppStarterTemplateTheme
+import au.edu.jcu.reefsafe.ui.theme.ReefSafeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            CP3406_CP5603UtilityAppStarterTemplateTheme {
+            ReefSafeTheme {
                 UtilityApp()
             }
         }
@@ -45,7 +45,7 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun UtilityAppPreview() {
-    CP3406_CP5603UtilityAppStarterTemplateTheme {
+    ReefSafeTheme {
         UtilityApp()
     }
 }

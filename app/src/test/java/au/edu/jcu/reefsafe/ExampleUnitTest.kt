@@ -1,4 +1,4 @@
-package au.edu.jcu.cp3406_cp5603utilityappstartertemplate
+package au.edu.jcu.reefsafe
 
 import org.junit.Test
 

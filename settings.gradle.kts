@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CP3406_CP5307 Utility App Starter Template"
+rootProject.name = "Reef Safe"
 include(":app")

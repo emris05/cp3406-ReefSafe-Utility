@@ -1,7 +1,8 @@
-# Utility App Starter – CP3406 / CP5307
+# Reef Safe
 
-This is a basic Android app template for **Assessment 1: Utility App** in CP3406/CP5603..  
-It provides the structure for a simple tabular UI using **Jetpack Compose** and **Material Design 3**.
+A utility app for **CP3406 Assessment 1**. Tells you, at a glance, whether the reef is worth the drive out of Townsville today — visibility, sea temperature, waves, wind, tide, UV, and a single 0–100 snorkel score with a verdict.
+
+Built with **Kotlin**, **Jetpack Compose**, and **Material Design 3**.
 
 ---
 
@@ -36,7 +37,7 @@ It provides the structure for a simple tabular UI using **Jetpack Compose** and 
 |------|--------------------------------|----------------------------------|
 | 1    | Kotlin + Android Studio         | MainActivity.kt |
 | 2    | Jetpack Compose Layouts         | UtilityApp(), UtilityScreen(), SettingsScreen()   |
-| 3    | Material Design 3               | CP3406_CP5603UtilityAppStarterTemplateTheme, MaterialTheme.typography |
+| 3    | Material Design 3               | ReefSafeTheme, MaterialTheme.typography |
 | 4    | ViewModel | Not included in starter          |
 | 5    | Retrofit  | Not included in starter          |
 
@@ -51,5 +52,4 @@ It provides the structure for a simple tabular UI using **Jetpack Compose** and 
 ---
 
 ## 📚 License
-This template is provided for educational use in CP3406.  
-Feel free to modify and extend it for your assessment.
+Educational use, CP3406.
