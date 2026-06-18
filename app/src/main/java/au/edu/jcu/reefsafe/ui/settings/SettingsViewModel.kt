@@ -32,8 +32,6 @@ class SettingsViewModel @Inject constructor(
 
     fun setShowWaveCard(show: Boolean) = update { it.copy(showWaveCard = show) }
 
-    fun setShowTideCard(show: Boolean) = update { it.copy(showTideCard = show) }
-
     fun setUse24HourTime(use: Boolean) = update { it.copy(use24HourTime = use) }
 
     private fun update(transform: (Settings) -> Settings) {

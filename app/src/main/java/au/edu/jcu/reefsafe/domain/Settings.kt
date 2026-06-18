@@ -20,6 +20,5 @@ data class Settings(
     val activity: Activity = Activity.SNORKEL,
     val units: Units = Units.METRIC,
     val showWaveCard: Boolean = true,
-    val showTideCard: Boolean = true,
     val use24HourTime: Boolean = true
 )
