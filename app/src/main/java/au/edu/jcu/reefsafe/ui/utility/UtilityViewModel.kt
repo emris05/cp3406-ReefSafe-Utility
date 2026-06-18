@@ -20,7 +20,11 @@ import kotlinx.coroutines.launch
 
 sealed interface UtilityUiState {
     data object Loading : UtilityUiState
-    data class Success(val score: SnorkelScore, val refreshing: Boolean = false) : UtilityUiState
+    data class Success(
+        val conditions: ReefConditions,
+        val score: SnorkelScore,
+        val refreshing: Boolean = false
+    ) : UtilityUiState
     data class Error(val message: String) : UtilityUiState
 }
 
@@ -41,7 +45,7 @@ class UtilityViewModel @Inject constructor(
             error != null -> UtilityUiState.Error(error)
             conditions != null -> {
                 val score = scoreConditions(conditions, settings.activity)
-                UtilityUiState.Success(score = score, refreshing = refreshing)
+                UtilityUiState.Success(conditions = conditions, score = score, refreshing = refreshing)
             }
             else -> UtilityUiState.Loading
         }

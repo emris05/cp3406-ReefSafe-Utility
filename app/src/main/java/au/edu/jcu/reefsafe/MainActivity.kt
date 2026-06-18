@@ -20,11 +20,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import au.edu.jcu.reefsafe.ui.settings.SettingsScreen
 import au.edu.jcu.reefsafe.ui.theme.ReefSafeTheme
 import au.edu.jcu.reefsafe.ui.utility.UtilityScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,14 +35,6 @@ class MainActivity : ComponentActivity() {
                 UtilityApp()
             }
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun UtilityAppPreview() {
-    ReefSafeTheme {
-        UtilityApp()
     }
 }
 
