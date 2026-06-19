@@ -11,12 +11,12 @@ data class ForecastResponse(
 
 data class ForecastCurrent(
     val time: String?,
-    val temperature2m: Double?,
+    @Json(name = "temperature_2m") val temperature2m: Double?,
     @Json(name = "wind_speed_10m") val windSpeed10m: Double?,
     @Json(name = "wind_direction_10m") val windDirection10m: Double?,
     val visibility: Double?,
-    val uvIndex: Double?,
-    val cloudCover: Double?
+    @Json(name = "uv_index") val uvIndex: Double?,
+    @Json(name = "cloud_cover") val cloudCover: Double?
 )
 
 data class ForecastDaily(

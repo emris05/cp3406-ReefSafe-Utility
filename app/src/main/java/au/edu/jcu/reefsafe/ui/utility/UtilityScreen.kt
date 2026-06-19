@@ -228,12 +228,16 @@ private fun buildConditions(conditions: ReefConditions, settings: Settings): Lis
     add(Condition("Sea Temperature", formatTemperature(conditions.seaSurfaceTempC, settings.units)))
     if (settings.showWaveCard) {
         val wave = formatWaveHeight(conditions.waveHeightM, settings.units)
-        val parts = buildList {
-            if (wave != "—") add(wave)
-            conditions.wavePeriodS?.let { add("${(it * 10).roundToInt() / 10.0}s") }
-            conditions.waveDirectionDeg?.let { add(cardinal(it)) }
+        if (wave == "—") {
+            add(Condition("Wave Height", "—"))
+        } else {
+            val parts = buildList {
+                add(wave)
+                conditions.wavePeriodS?.let { add("${(it * 10).roundToInt() / 10.0}s") }
+                conditions.waveDirectionDeg?.let { add(cardinal(it)) }
+            }
+            add(Condition("Wave Height", parts.joinToString(" · ")))
         }
-        add(Condition("Wave Height", parts.joinToString(" · ").ifEmpty { "—" }))
     }
     val wind = formatWindSpeed(conditions.windSpeedKmh, settings.units)
     val windParts = buildList {
